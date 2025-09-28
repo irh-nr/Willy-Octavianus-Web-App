@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Willy Octavianus",
   description:
-    "Engineering Management Professional helping organizations build high-performing technical teams and scalable engineering practices.", //descripiton
+    "Transforming businesses through strategic technology consulting and Industry 4.0 solutions, specializing in bridging complex technology with measurable business outcomes across international markets.", //descripiton
 };
 
 export default function RootLayout({

@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-
 import React, { ReactElement } from "react";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Globe, Building, TrendingUp, DollarSign } from "lucide-react";
