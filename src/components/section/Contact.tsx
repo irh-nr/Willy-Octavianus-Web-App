@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 
-
 import { Mail, Linkedin, Calendar, CheckCircle } from "lucide-react";
 import ContactForm from "../ui/contact-form";
 
@@ -24,41 +23,39 @@ export default function Contact() {
               <h3 className="heading-tertiary mb-6">Get in Touch</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-primary">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
                     <a
-                      href="mailto:willy.octavianus@example.com"
-                      target="_blank"
+                      href="mailto:willyoctavianus@gmail.com"
+                      target="blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-gray-800"
                     >
-                      willy.octavianus@example.com
+                      willyoctavianus@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-primary">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700">
                     <Linkedin className="w-5 h-5" />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">LinkedIn</p>
                     <a
-                      href="https://linkedin.com/in/willyoctavianus"
-                      target="_blank"
+                      href="https://www.linkedin.com/in/willy-octavianus"
+                      target="blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-gray-800"
                     >
-                      /in/willyoctavianus
+                      /in/willy-octavianus
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-primary">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700">
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
@@ -66,10 +63,10 @@ export default function Contact() {
                       Schedule a Call
                     </p>
                     <a
-                      href="https://calendly.com/willyoctavianus"
-                      target="_blank"
+                      href="https://wa.me/6287875085457"
+                      className="text-blue-700 hover:text-blue-800"
+                      target="blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-gray-800"
                     >
                       Book a 30-minute consultation
                     </a>

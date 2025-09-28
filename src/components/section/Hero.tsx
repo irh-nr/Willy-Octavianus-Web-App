@@ -2,29 +2,49 @@ import Image from "next/image";
 import CTAbutton from "@/components/ui/CTA-button";
 import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export default function Hero() {
   return (
     <section id="hero">
       <div className="flex flex-col-reverse container lg:flex-row min-h-screen justify-between items-center mt-12 gap-4">
         <div className="flex flex-col gap-6 p-4">
-          <div className="flex flex-col gap-4 text-center lg:text-start">
+          <div className="flex flex-col text-center lg:text-start">
             <h1>
               Willy <span className="text-primary">Octavianus</span>
             </h1>
-            <p className="font-semibold">Engineering Management Professional</p>
-            <p className="body-large max-w-lg">
-              Transforming technical teams into high-performing organizations
-              through strategic leadership, process optimization, and innovative
-              engineering practices.
+            <p className="font-semibold">
+              Solutions Consultant & Business Architect
             </p>
+
+            <p className="max-w-lg">
+              Transforming businesses through strategic technology consulting
+              and Industry 4.0 solutions, specializing in bridging complex
+              technology with measurable business outcomes across international
+              markets.
+            </p>
+          </div>
+          <div className="flex items-center space-x-4 h-6">
+            <span>15+ Years</span>
+            <Separator orientation="vertical" />
+            <span>6 Countries</span>
+            <Separator orientation="vertical" />
+            <span>Industry 4.0 Specialist</span>
           </div>
           <div className="flex flex-row items-center gap-6 justify-center lg:justify-start">
             <CTAbutton />
-            <a href={"/"}>
+            <a
+              href={"https://www.linkedin.com/in/willy-octavianus"}
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <Linkedin opacity={"50%"} />
             </a>
-            <a href={"/"}>
+            <a
+              href={"mailto:willyoctavianus@gmail.com"}
+              target="blank"
+              rel="noopener noreferrer"
+            >
               <Mail opacity={"50%"} />
             </a>
           </div>
@@ -39,7 +59,7 @@ export default function Hero() {
           <div className="relative z-10 rounded-3xl bg-card p-5 md:p-6 shadow-2xl">
             <div className="bg-white-10 backdrop-blur-md" />
             <Image
-              src={"/img/menwithglasses.jpg"}
+              src={"/img/Willy.jpg"}
               alt="Willy Octavianus - Engineering Management Professional"
               width={500}
               height={500}

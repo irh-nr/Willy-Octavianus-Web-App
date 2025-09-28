@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import {
-  Settings,
+  PieChart,
   GitBranch,
-  Shield,
+  Cloud,
   BarChart3,
   Zap,
   Globe,
@@ -19,52 +19,52 @@ interface SkillsItems {
 
 const skillsItems: SkillsItems[] = [
   {
-    icon: <Users2 className="w-6 h-6" />,
-    title: "Team Leadership & Management",
+    icon: <GitBranch className="w-6 h-6" />,
+    title: "Industry 4.0 Solutions",
     description:
-      "Building, mentoring, and scaling engineering teams from 5 to 50+ members",
+      "Implementing smart manufacturing and digital factory solutions across 6+ Asian countries",
   },
   {
-    icon: <Settings className="w-6 h-6" />,
-    title: "Process Optimization",
+    icon: <Cloud className="w-6 h-6" />,
+    title: "Cloud Infrastructure",
     description:
-      "Implementing Agile, DevOps, and CI/CD practices to improve delivery speed",
+      "Google Cloud certified architect specializing in scalable enterprise cloud solutions",
   },
   {
     icon: <Code className="w-6 h-6" />,
-    title: "Technical Architecture",
+    title: "Enterprise Architecture",
     description:
-      "Designing scalable systems and making strategic technology decisions",
+      "Designing end-to-end business systems integrating multiple software tools and platforms",
+  },
+  {
+    icon: <Users2 className="w-6 h-6" />,
+    title: "Business Consulting",
+    description:
+      "Translating complex technical solutions into clear business value propositions",
+  },
+  {
+    icon: <Globe className="w-6 h-6" />,
+    title: "Cross-Cultural Strategy",
+    description:
+      "Successfully managing international projects across diverse cultural and market contexts",
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
-    title: "Performance Analytics",
+    title: "Financial Management",
     description:
-      "Using data and metrics to drive engineering excellence and business outcomes",
-  },
-  {
-    icon: <GitBranch className="w-6 h-6" />,
-    title: "Product Development",
-    description:
-      "Full-cycle product management from conception to market deployment",
-  },
-  {
-    icon: <Shield className="w-6 h-6" />,
-    title: "Risk Management",
-    description:
-      "Identifying and mitigating technical and operational risks proactively",
+      "Proven expertise in CFO services, cashflow optimization, and business turnaround strategies",
   },
   {
     icon: <Zap className="w-6 h-6" />,
     title: "Digital Transformation",
     description:
-      "Leading organizational change and technology modernization initiatives",
+      "Leading organizational change and technology modernization across multiple industries",
   },
   {
-    icon: <Globe className="w-6 h-6" />,
-    title: "Remote Team Management",
+    icon: <PieChart className="w-6 h-6" />,
+    title: "Executive Presentations",
     description:
-      "Successfully managing distributed teams across multiple time zones",
+      "Delivering high-impact presentations to C-suite executives and stakeholders across Asia",
   },
 ];
 
@@ -75,8 +75,9 @@ export default function Expertise() {
         <div className="text-center mb-12">
           <h2>Skills & Expertise</h2>
           <p className="max-w-3xl mx-auto">
-            Comprehensive engineering management expertise spanning team
-            leadership, technical strategy, and organizational transformation
+            Comprehensive solutions consulting expertise spanning Industry 4.0
+            implementation, enterprise architecture, and international business
+            transformation
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -103,28 +104,28 @@ export default function Expertise() {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Agile",
-              "Scrum",
-              "Kanban",
-              "DevOps",
-              "CI/CD",
-              "AWS",
-              "Docker",
-              "Kubernetes",
-              "Microservices",
-              "React",
-              "Node.js",
-              "Python",
+              "Industry 4.0",
+              "Google Cloud Platform",
+              "Enterprise Architecture",
+              "Digital Transformation",
+              "Business Analysis",
+              "ISA95",
+              "ERP Systems",
+              "Cloud Infrastructure",
+              "C++",
+              "C#",
               "Java",
-              "PostgreSQL",
-              "MongoDB",
-              "Redis",
-              "Jenkins",
-              "Git",
-              "Jira",
-              "Confluence",
-              "Slack",
-              "Zoom",
+              "Oracle Database",
+              "Financial Management",
+              "Project Management",
+              "Cross-Cultural Consulting",
+              "CMMS",
+              "Remote Desktop Services",
+              "System Integration",
+              "Business Development",
+              "Strategic Planning",
+              "Agile",
+              "Change Management",
             ].map((tech) => (
               <span
                 key={tech}

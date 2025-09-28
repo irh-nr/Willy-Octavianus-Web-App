@@ -2,7 +2,7 @@
 
 import React, { ReactElement } from "react";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { Award, Users, Target, TrendingUp } from "lucide-react";
+import { Globe, Building, TrendingUp, DollarSign } from "lucide-react";
 
 interface KeySkills {
   title: string;
@@ -12,55 +12,54 @@ interface KeySkills {
 
 const keySkills: KeySkills[] = [
   {
-    icon: <Users className="w-6 h-6" />,
-    title: "Team Leadership",
+    icon: <Globe className="w-6 h-6" />,
+    title: "International Expertise",
     description:
-      "Led cross-functional teams of 20+ engineers across multiple product lines",
+      "15+ years across 6 Asian countries with deep cross-cultural business understanding",
+  },
+  {
+    icon: <Building className="w-6 h-6" />,
+    title: "Systems Architecture",
+    description:
+      "Certified Cloud Infrastructure Architect specializing in Industry 4.0 and ERP solutions",
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,
-    title: "Process Optimization",
+    title: "Strategic Consulting",
     description:
-      "Improved delivery efficiency by 40% through agile transformation initiatives",
+      "Expert at translating complex technology into clear business value propositions",
   },
   {
-    icon: <Target className="w-6 h-6" />,
-    title: "Strategic Planning",
-    description:
-      "Architected technical roadmaps aligning engineering goals with business objectives",
-  },
-  {
-    icon: <Award className="w-6 h-6" />,
+    icon: <DollarSign className="w-6 h-6" />,
     title: "Proven Results",
     description:
-      "Successfully delivered 15+ major product releases on time and within budget",
+      "Saved construction company from bankruptcy and led successful GCP business unit development",
   },
 ];
 
 export default function About() {
   return (
     <section id="about">
-      <div className="container lg:flex justify-between gap-12 space-y-16">
+      <div className="container lg:flex justify-between items-center gap-12 space-y-16">
         <div className="text-center lg:text-start max-w-xl">
           <h2>About Willy</h2>
           <p>
-            With over 8 years of experience in engineering management, I
-            specialize in building and scaling high-performance engineering
-            teams. My passion lies in creating systems and processes that enable
-            developers to do their best work while delivering exceptional
-            products to users.
+            With over 15 years of international experience in solutions
+            consulting and business architecture, I specialize in transforming
+            complex technology challenges into strategic business advantages
+            across diverse cultural and market landscapes.
           </p>
           <p>
-            I believe in leading by example, fostering a culture of continuous
-            learning, and maintaining a balance between technical excellence and
-            business impact. My approach combines data-driven decision making
-            with empathetic leadership to drive sustainable growth.
+            I believe in data-driven decision making combined with deep cultural
+            understanding to deliver solutions that truly resonate with local
+            market needs. My approach integrates technical excellence with
+            strategic business thinking.
           </p>
           <p>
-            Currently, I'm helping organizations transform their engineering
-            practices through consulting and advisory work, sharing insights
-            gained from managing teams at both startups and enterprise
-            companies.
+            Currently serving as Enterprise Management Systems Architect with UK
+            Research & Innovation while continuing my consulting work across
+            Asia-Pacific markets. I bring unique insights from living and
+            working across five countries.
           </p>
         </div>
 

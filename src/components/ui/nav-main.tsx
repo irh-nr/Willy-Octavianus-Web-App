@@ -20,6 +20,7 @@ interface NavItems {
 const navItems: NavItems[] = [
   { title: "About", href: "/#about" },
   { title: "Expertise", href: "/#expertise" },
+  { title: "Experience", href: "/#experience" },
   { title: "Projects", href: "/#projects" },
   { title: "Services", href: "/#services" },
 ];
@@ -29,7 +30,10 @@ export default function NavMain() {
     <div className="flex flex-row justify-between backdrop-blur-sm">
       <div>
         <a href={"/#hero"}>
-          <span className="logo">Willy Octavianus</span>
+          <span className="logo hidden lg:flex">Willy Octavianus</span>
+        </a>
+        <a href={"/#hero"}>
+          <span className="logo lg:hidden">Wo.</span>
         </a>
       </div>
 
@@ -89,14 +93,6 @@ export default function NavMain() {
                 <div className="text-sm text-gray-400">
                   © {new Date().getFullYear()} Willy Octavianus. All rights
                   reserved.
-                </div>
-                <div className="flex space-x-6 text-sm text-gray-400">
-                  <button className="hover:text-blue-400 transition-colors">
-                    Privacy Policy
-                  </button>
-                  <button className="hover:text-blue-400 transition-colors">
-                    Terms of Service
-                  </button>
                 </div>
               </div>
             </SheetFooter>

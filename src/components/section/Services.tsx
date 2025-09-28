@@ -15,56 +15,83 @@ interface Services {
 
 const services: Services[] = [
   {
-    title: "Engineering Team Assessment",
+    title: "Industry 4.0 Transformation Consulting",
     description:
-      "Comprehensive evaluation of your current engineering practices, team dynamics, and development processes.",
+      "Comprehensive digital factory solutions and smart manufacturing implementations based on 5+ years experience across Asian markets with leading automation companies.",
     features: [
-      "Team performance analysis",
-      "Process efficiency audit",
-      "Technology stack evaluation",
-      "Detailed recommendations report",
-    ],
-    duration: "2-4 weeks",
-    ideal: "Growing companies with 10-50 engineers",
-  },
-  {
-    title: "Agile Transformation Consulting",
-    description:
-      "Guide your organization through a complete agile transformation with proven methodologies and best practices.",
-    features: [
-      "Agile methodology implementation",
-      "Team training and coaching",
-      "Process optimization",
-      "Performance metrics setup",
+      "Smart manufacturing system design",
+      "Digital transformation workshops for all departments",
+      "Industry 4.0 technology selection and integration",
+      "ROI-focused implementation roadmap",
     ],
     duration: "3-6 months",
-    ideal: "Teams transitioning from traditional to agile methods",
+    ideal: "Manufacturing companies adopting smart factory solutions",
   },
   {
-    title: "Technical Leadership Coaching",
+    title: "Enterprise Systems Architecture",
     description:
-      "One-on-one coaching for engineering managers and technical leads to develop leadership skills and strategic thinking.",
+      "End-to-end enterprise management system design and integration, specializing in scalable cloud-based solutions and ERP implementations.",
     features: [
-      "Leadership skill development",
-      "Strategic planning guidance",
-      "Communication improvement",
-      "Career advancement planning",
-    ],
-    duration: "Ongoing",
-    ideal: "Senior engineers moving into management roles",
-  },
-  {
-    title: "DevOps Implementation",
-    description:
-      "End-to-end DevOps transformation including CI/CD pipeline setup, infrastructure automation, and monitoring.",
-    features: [
-      "CI/CD pipeline design",
-      "Infrastructure as code",
-      "Monitoring and alerting setup",
-      "Team training on DevOps practices",
+      "Cross-departmental business process analysis",
+      "Enterprise management system strategy development",
+      "Multi-platform software integration",
+      "Data management and reporting capabilities setup",
     ],
     duration: "2-4 months",
-    ideal: "Companies looking to improve deployment efficiency",
+    ideal: "Growing businesses requiring unified management platforms",
+  },
+  {
+    title: "Cross-Cultural Business Consulting",
+    description:
+      "Strategic consulting for international business expansion, leveraging deep understanding of Asian markets and cross-cultural business practices.",
+    features: [
+      "Asia-Pacific market entry strategy",
+      "Cross-cultural team management guidance",
+      "International partnership development",
+      "Cultural adaptation of business processes",
+    ],
+    duration: "Ongoing/Project-based",
+    ideal: "Companies expanding operations to Asian markets",
+  },
+  {
+    title: "Google Cloud & Digital Transformation",
+    description:
+      "Cloud infrastructure consulting and digital transformation strategy, backed by Google Cloud certification and proven business unit development experience.",
+    features: [
+      "Google Cloud Platform architecture design",
+      "Cloud migration strategy and execution",
+      "Digital transformation roadmap development",
+      "Team capability building and training",
+    ],
+    duration: "1-3 months planning + implementation",
+    ideal: "Organizations modernizing IT infrastructure and processes",
+  },
+  {
+    title: "Financial Systems & Business Turnaround",
+    description:
+      "Comprehensive financial management consulting including cashflow optimization, system implementation, and business recovery strategies.",
+    features: [
+      "Financial process analysis and optimization",
+      "Cashflow management system design",
+      "Enterprise bookkeeping and reporting setup",
+      "Business turnaround strategy development",
+    ],
+    duration: "3-12 months",
+    ideal:
+      "Companies facing financial challenges or requiring CFO-level expertise",
+  },
+  {
+    title: "Technology Strategy & Architecture",
+    description:
+      "Strategic technology consulting for complex business challenges, translating technical solutions into measurable business outcomes across industries.",
+    features: [
+      "Technology stack evaluation and selection",
+      "Solution architecture design and validation",
+      "Business-technology alignment consulting",
+      "Executive-level technology presentations",
+    ],
+    duration: "1-2 months assessment + ongoing",
+    ideal: "Enterprises requiring strategic technology decision-making support",
   },
 ];
 
@@ -75,9 +102,9 @@ export default function Services() {
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2>Consulting Services</h2>
           <p>
-            Tailored engineering management consulting designed to transform
-            your technical organization and accelerate business growth through
-            improved engineering practices
+            Strategic technology consulting services designed to transform your
+            business through Industry 4.0 solutions, enterprise architecture,
+            and international market expertise
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
@@ -145,25 +172,25 @@ export default function Services() {
                 step: "01",
                 title: "Discovery Call",
                 description:
-                  "We start with a detailed discussion about your challenges and goals",
+                  "We start with a detailed discussion about your business challenges and transformation goals",
               },
               {
                 step: "02",
-                title: "Assessment",
+                title: "Business Analysis",
                 description:
-                  "Thorough evaluation of your current engineering practices and team dynamics",
+                  "Thorough evaluation of your current systems, processes, and market requirements",
               },
               {
                 step: "03",
-                title: "Strategy",
+                title: "Solution Design",
                 description:
-                  "Custom roadmap development with clear milestones and success metrics",
+                  "Custom strategy development with clear implementation roadmap and success metrics",
               },
               {
                 step: "04",
-                title: "Implementation",
+                title: "Execution & Support",
                 description:
-                  "Hands-on execution with ongoing support and progress monitoring",
+                  "Hands-on implementation with ongoing guidance and progress monitoring",
               },
             ].map((phase, index) => (
               <div key={index} className="text-center space-y-4">
