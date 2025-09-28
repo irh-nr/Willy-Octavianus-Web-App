@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+
+
 import { Mail, Linkedin, Calendar, CheckCircle } from "lucide-react";
 import ContactForm from "../ui/contact-form";
 

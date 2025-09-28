@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import React, { ReactElement } from "react";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { Award, Users, Target, TrendingUp, Section } from "lucide-react";
+import { Award, Users, Target, TrendingUp } from "lucide-react";
 
 interface KeySkills {
   title: string;
@@ -10,28 +12,28 @@ interface KeySkills {
 
 const keySkills: KeySkills[] = [
   {
+    icon: <Users className="w-6 h-6" />,
     title: "Team Leadership",
     description:
       "Led cross-functional teams of 20+ engineers across multiple product lines",
-    icon: <Users className="w-6-h6" />,
   },
   {
+    icon: <TrendingUp className="w-6 h-6" />,
     title: "Process Optimization",
     description:
       "Improved delivery efficiency by 40% through agile transformation initiatives",
-    icon: <Target className="w-6-h6" />,
   },
   {
+    icon: <Target className="w-6 h-6" />,
+    title: "Strategic Planning",
+    description:
+      "Architected technical roadmaps aligning engineering goals with business objectives",
+  },
+  {
+    icon: <Award className="w-6 h-6" />,
     title: "Proven Results",
     description:
       "Successfully delivered 15+ major product releases on time and within budget",
-    icon: <TrendingUp className="w-6-h6" />,
-  },
-  {
-    title: "Team Leadership",
-    description:
-      "Led cross-functional teams of 20+ engineers across multiple product lines",
-    icon: <Users className="w-6-h6" />,
   },
 ];
 

@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
+
+
 import React from "react";
 import { ExternalLink, Calendar, Users, Zap } from "lucide-react";
 import { Card } from "../ui/card";
