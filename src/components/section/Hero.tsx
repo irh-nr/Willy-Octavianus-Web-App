@@ -3,6 +3,7 @@ import CTAbutton from "@/components/ui/CTA-button";
 import { Linkedin } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Dot } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -14,22 +15,22 @@ export default function Hero() {
               Willy <span className="text-primary">Octavianus</span>
             </h1>
             <p className="font-semibold">
-              Solutions Consultant & Business Architect
+              Scientist, Technologist, Engineer, Architect, Modeller
             </p>
 
             <p className="max-w-lg">
-              Transforming businesses through strategic technology consulting
-              and Industry 4.0 solutions, specializing in bridging complex
-              technology with measurable business outcomes across international
-              markets.
+              I make complexity manageable. I use Management-STEAM approach to
+              improve management systems and workflow performance
             </p>
           </div>
-          <div className="flex items-center space-x-4 h-6">
+          <div className="flex items-center space-x-4 h-28 text-center lg:text-start md:h-20">
             <span>15+ Years</span>
             <Separator orientation="vertical" />
-            <span>6 Countries</span>
-            <Separator orientation="vertical" />
-            <span>Industry 4.0 Specialist</span>
+            <span>
+              5 Countries lived <br /> (IDN, JPN, CHN, DEU, GBR)
+            </span>
+            <Dot />
+            <span>10+ Client Countries (EMEA & APAC)</span>
           </div>
           <div className="flex flex-row items-center gap-6 justify-center lg:justify-start">
             <CTAbutton />
@@ -65,7 +66,7 @@ export default function Hero() {
               height={500}
               className="h-96 w-80 rounded-2xl object-cover"
               priority
-            ></Image>
+            />
           </div>
         </div>
       </div>

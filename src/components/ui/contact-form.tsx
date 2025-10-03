@@ -23,7 +23,8 @@ const formSchema = z.object({
     .string()
     .nonempty("Required")
     .pipe(z.email({ message: "Invalid format" })), // wajib
-  company: z.string().optional(), // opsional
+  company: z.string().nonempty("Required"), // opsional
+  role: z.string().nonempty("Required"), // opsional
   message: z.string().nonempty("Required"), // wajib
 });
 
@@ -34,6 +35,7 @@ export default function ContactForm() {
       name: "",
       email: "",
       company: "",
+      role: "",
       message: "",
     },
   });
@@ -55,7 +57,9 @@ export default function ContactForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-8 max-w-3xl mx-auto"
       >
-        <h3>Send a Message</h3>
+        <h3>
+          Book a <span className="font-bold">FREE</span> 30-minute consultation
+        </h3>
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-6">
             <FormField
@@ -99,9 +103,26 @@ export default function ContactForm() {
           name="company"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Company</FormLabel>
+              <FormLabel>Company *</FormLabel>
               <FormControl>
                 <Input placeholder="Your company name" type="" {...field} />
+              </FormControl>
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="role"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Role *</FormLabel>
+              <FormControl>
+                <Input
+                  placeholder="Your role in the company"
+                  type=""
+                  {...field}
+                />
               </FormControl>
             </FormItem>
           )}
@@ -115,7 +136,7 @@ export default function ContactForm() {
               <FormLabel>Message *</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell me about your engineering challenges or what you'd like to discuss..."
+                  placeholder="What would you like to discuss..."
                   className="resize-y h-40"
                   {...field}
                 />

@@ -112,7 +112,6 @@
   --sidebar-ring: oklch(0.488 0.243 264.376);
 }
 
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -143,7 +142,7 @@ h2 {
 h3 {
   @apply scroll-m-20 text-2xl font-semibold tracking-tight;
 }
-h4{
+h4 {
   @apply scroll-m-20 text-xl font-semibold tracking-tight;
 }
 p {

@@ -1,104 +1,125 @@
 import React from "react";
+import Navmobile from "./nav-mobile";
+import { navItems } from "@/lib/navitems";
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./button";
-import { Menu } from "lucide-react";
 import {
-  Sheet,
-  SheetTrigger,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-} from "./sheet";
-import { XIcon } from "lucide-react";
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuContent,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
+} from "./navigation-menu";
 
-interface NavItems {
-  title: string;
-  href: string;
+function ListItem({
+  title,
+  children,
+  href,
+  ...props
+}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild>
+        <Link href={href}>
+          <div className="text-sm leading-none font-medium">{title}</div>
+          <p className="text-muted-foreground line-clamp-3 text-sm leading-snug !mt-0">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
 }
-
-const navItems: NavItems[] = [
-  { title: "About", href: "/#about" },
-  { title: "Expertise", href: "/#expertise" },
-  { title: "Experience", href: "/#experience" },
-  { title: "Projects", href: "/#projects" },
-  { title: "Services", href: "/#services" },
-];
 
 export default function NavMain() {
   return (
     <div className="flex flex-row justify-between backdrop-blur-sm">
       <div>
-        <a href={"/#hero"}>
+        <a href={"/#"}>
           <span className="logo hidden lg:flex">Willy Octavianus</span>
         </a>
-        <a href={"/#hero"}>
+        <a href={"/#"}>
           <span className="logo lg:hidden">Wo.</span>
         </a>
       </div>
 
-      <div className="hidden gap-6 md:flex">
-        {" "}
-        {/*Dekstop View*/}
-        {navItems.map((items, index) => (
-          <Button asChild key={index} variant={"ghost"}>
-            <a href={items.href}>{items.title}</a>
-          </Button>
-        ))}
-        <Button asChild>
-          <a href={"/#contact"}>Get in Touch</a>
-        </Button>
-      </div>
+      {/*Dekstop View*/}
+      <div className="hidden md:flex">
+        <NavigationMenu viewport={false}>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        className="flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md relative overflow-hidden"
+                        href="/#"
+                      >
+                        <div className="absolute inset-0">
+                          <Image
+                            src={"/img/Willy.jpg"}
+                            alt="Willy Octavianus - Engineering Management Professional"
+                            width={500}
+                            height={500}
+                            className="w-full h-full rounded-md object-cover"
+                            priority
+                          />
+                          {/* Overlay Layer - position absolute */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-md" />
+                        </div>
 
-      <div className="flex md:hidden">
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant={"ghost"}>
-              <Menu className="size-5" />
-            </Button>
-          </SheetTrigger>
-
-          <SheetContent side="top">
-            <SheetHeader className="shadow-sm">
-              <SheetTitle className="flex justify-between border-none leading-none !pb-0">
-                <SheetClose asChild>
-                  <a href={"/#hero"}>
-                    <span className="logo">Willy Octavianus</span>
-                  </a>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Button variant={"ghost"}>
-                    <XIcon className="size-5" />
-                  </Button>
-                </SheetClose>
-              </SheetTitle>
-            </SheetHeader>
-            <div className="flex flex-col gap-6 px-4">
-              {navItems.map((items, index) => (
-                <SheetClose asChild key={index}>
-                  <Button asChild variant={"link"} className="h-10">
-                    <a href={items.href}>{items.title}</a>
-                  </Button>
-                </SheetClose>
-              ))}
-              <SheetClose asChild>
-                <Button asChild>
-                  <a href={"/#contact"}>Get in Touch</a>
-                </Button>
-              </SheetClose>
-            </div>
-            <SheetFooter>
-              {/* Bottom Bar */}
-              <div className="border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                <div className="text-sm text-gray-400">
-                  © {new Date().getFullYear()} Willy Octavianus. All rights
-                  reserved.
-                </div>
-              </div>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet>
+                        <div className="z-3">
+                          <div className="mt-4 text-lg font-medium text-secondary text-shadow-white">
+                            Willy Octavianus
+                          </div>
+                          <p className="text-secondary text-sm leading-tight text-shadow-white !mt-0">
+                            Scientist, Technologist, Engineer, Architect,
+                            Modeller
+                          </p>
+                        </div>
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem href="/#about" title="About Me">
+                    15+ years transforming technology challenges into business
+                    advantages across Asia-Pacific markets. Currently Enterprise
+                    Management Systems Architect with UK Research & Innovation,
+                    specializing in cross-cultural solutions consulting.
+                  </ListItem>
+                  <ListItem href="/#contact" title="Help Me Help You">
+                    I dont stand in one spot and point out a destination for you
+                    to reach on your own. I walk alongside you. I hold the map,
+                    we look at it together, and we discuss it as we go. You
+                    guide me in how best I can guide you.
+                  </ListItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>
+                Experience & Services
+              </NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {navItems.map((item, index) => (
+                    <ListItem key={index} title={item.title} href={item.href}>
+                      {item.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
+      <Button asChild className="hidden md:flex">
+        <a href={"/#contact"}>Get in Touch</a>
+      </Button>
+      <Navmobile />
     </div>
   );
 }
