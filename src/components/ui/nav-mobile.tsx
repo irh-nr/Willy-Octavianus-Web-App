@@ -59,22 +59,21 @@ export default function Navmobile() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <ul className="p-4 space-y-4 text-blue-800">
-                    <li>
-                      <Link
-                        href="/#about"
-                        className="text-sm leading-none font-medium underline"
-                      >
-                        About Me
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/#contact"
-                        className="text-sm leading-none font-medium underline"
-                      >
-                        Contact Me
-                      </Link>
-                    </li>
+                    {[
+                      { href: "/#about", label: "About Me" },
+                      { href: "/#contact", label: "Contact Me" },
+                    ].map((link, index) => (
+                      <li key={index}>
+                        <SheetClose asChild>
+                          <Link
+                            href={link.href}
+                            className="text-sm leading-none font-medium underline"
+                          >
+                            {link.label}
+                          </Link>
+                        </SheetClose>
+                      </li>
+                    ))}
                   </ul>
                 </AccordionContent>
               </AccordionItem>
