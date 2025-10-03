@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CTAbutton() {
   return (
@@ -10,13 +11,13 @@ export default function CTAbutton() {
         className="group hover:scale-101 transition-transform p-5"
         variant={"default"}
       >
-        <a href={"/#contact"}>
+        <Link href={"/#contact"}>
           Get in Touch
           <ArrowRight
             size={20}
             className="ml-2 group-hover:translate-x-1 transition-transform"
           />
-        </a>
+        </Link>
       </Button>
     </div>
   );
