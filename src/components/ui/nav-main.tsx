@@ -37,12 +37,12 @@ export default function NavMain() {
   return (
     <div className="flex flex-row justify-between backdrop-blur-sm">
       <div>
-        <a href={"/#"}>
+        <Link href={"/#"}>
           <span className="logo hidden lg:flex">Willy Octavianus</span>
-        </a>
-        <a href={"/#"}>
+        </Link>
+        <Link href={"/#"}>
           <span className="logo lg:hidden">Wo.</span>
-        </a>
+        </Link>
       </div>
 
       {/*Dekstop View*/}
