@@ -117,7 +117,7 @@ export default function NavMain() {
         </NavigationMenu>
       </div>
       <Button asChild className="hidden md:flex">
-        <a href={"/#contact"}>Get in Touch</a>
+        <Link href={"/#contact"}>Get in Touch</Link>
       </Button>
       <Navmobile />
     </div>
